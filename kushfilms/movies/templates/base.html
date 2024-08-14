@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Movie Site{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/movie/">Movies</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" class="social-icon"><img src="{% static 'icons/facebook.svg' %}" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><img src="{% static 'icons/twitter.svg' %}" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon"><img src="{% static 'icons/instagram.svg' %}" alt="Instagram"></a>
+            <a href="mailto:example@gmail.com" class="social-icon"><img src="{% static 'icons/email.svg' %}" alt="Gmail"></a>
+        </div>
+        <p>&copy; 2024 My Movie Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>
